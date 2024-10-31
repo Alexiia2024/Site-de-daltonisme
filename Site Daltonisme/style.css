@@ -1,0 +1,160 @@
+/* Test RangeSlider */
+
+        .slider {
+            height: 10px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            background: url('images/logo-a_modifier.png');
+            cursor: pointer;
+
+        }
+        
+        .slider:hover {
+            opacity: 1;
+        }
+        
+        /* .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 23px;
+            height: 24px;
+            border: 0;
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 23px;
+            height: 24px;
+            border: 0;
+            background: url('images/logo-a_modifier.png');
+            cursor: pointer;
+        } */
+        
+        
+        
+/* Toute la page */
+    
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "Belanosima";
+    }
+    
+    header, section{
+        margin-bottom: 10vh;
+    }
+
+    .container{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+        
+    .gap{
+        gap: 3%;
+    }
+    
+    /* .center{
+        text-align: center;
+    } */
+    
+/* Flex */
+
+    .flex-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-row{
+        display: flex;
+        flex-direction: row;
+    }
+    
+/* Grid */
+
+    .grid-t-columns1{
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+    .grid-t-columns2{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+    .grid-t-rows{
+        display: grid;
+        grid-template-rows: 50% 50%;
+    }
+    /* .grid-column-start{
+        grid-column-start: 2;
+    } */
+    #CouleurOrigine{
+        display: grid;
+        grid-column-start: 2;
+    }
+
+
+/* HEADER */
+
+    header{
+        background-color: #F9F9F9;
+        height: 10vh;
+    }
+
+    .box-shadow{
+        box-shadow: 0 0 20px 0; 
+    }
+
+    .logo{
+        width: 30vh;
+    }
+
+/* SECTION 1 */
+
+    /* animation roue qui tourne (Se trouve dans @keyframes spin) */
+    .roue_aleatoire:active{
+        animation: spin .15s ;
+    }
+
+    .size{
+        width: 25%;
+    }
+
+
+/* SECTION 2 */
+
+    .texte-miniscules{
+        text-transform: capitalize ;
+    }
+
+    
+    /* FOOTER */
+    
+    footer {
+        background-color: #F9F9F9;
+        height: 10vh;
+    }
+    
+    .box-shadow {
+        box-shadow: 0 0 20px 0;
+    }
+    
+    
+    /* Se trouve dans "Section 1 (animation qui tourne)" */
+    @keyframes spin{
+        from{
+            transform: rotate(0);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+
+/* Ajouter dans styles2.css */
+
+    /* .box-couleur{
+        height: 5vh;
+        border: solid black 1px;
+    } */
