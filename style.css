@@ -1,4 +1,13 @@
-/* Test RangeSlider */
+
+
+/* Ajouter dans styles2.css */
+
+    /* .box-couleur{
+        height: 5vh;
+        border: solid black 1px;
+    } */
+
+/* Test RangeSlider /
 
         .slider {
             height: 10px;
@@ -9,11 +18,11 @@
             -webkit-transition: .2s;
             transition: opacity .2s;
         }
-        
+
         .slider:hover {
             opacity: 1;
         }
-        
+
         .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -23,7 +32,7 @@
             background: url('images/logo-a_modifier.png');
             cursor: pointer;
         }
-        
+
         .slider::-moz-range-thumb {
             width: 23px;
             height: 24px;
@@ -34,124 +43,182 @@
 
 
 
+/* Test RangeSlider */
+
+.slider {
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    background: url('images/logo-a_modifier.png');
+    cursor: pointer;
+
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+/* .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 23px;
+            height: 24px;
+            border: 0;
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 23px;
+            height: 24px;
+            border: 0;
+            background: url('images/logo-a_modifier.png');
+            cursor: pointer;
+        } */
+
+
+
 /* Toute la page */
 
-    *{
-        margin: 0;
-        padding: 0;
-        font-family: "Belanosima";
-    }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Belanosima";
+}
 
-    .container{
-        margin-left: 10%;
-        margin-right: 10%;
-    }
+header,
+section {
+    margin-bottom: 10vh;
+}
 
-    .center{
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.gap {
+    gap: 3%;
+}
+
+/* .center{
         text-align: center;
-        vertical-align: middle;
-    }
+    } */
 
-    .gap{
-        gap: 3%;
-    }
+/* Flex */
 
-    .size{
-        width: 25%;
-    }
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    /* Flex */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
 
-        .d-flex{
-            display: flex;
-        }
-        .flex-center{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .flex-row{
-            display: flex;
-            flex-direction: row;
-        }
+/* Grid */
 
-    /* Grid */
+.grid-t-columns1 {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
 
-        .d-grid {
-            display: grid;
-        }
-        .grid-t-columns {
-            grid-template-columns: 50% 50%;
-        }
-        .grid-t-rows {
-            grid-template-columns: 50% 50%;
-        }
+.grid-t-columns2 {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.grid-t-rows {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.grid-column-start {
+    grid-column-start: 2;
+}
+
+/* #CouleurOrigine{
+        display: grid;
+        grid-column-start: 2;
+    } */
 
 
 /* HEADER */
 
-    header{
-        background-color: #F9F9F9;
-        height: 10vh;
-        margin-bottom: 10vh;
-    }
-    
-    .box-shadow{
-        box-shadow: 0 0 20px 0; 
-    }
-    
-    .logo{
-        width: 30vh;
-    }
+header {
+    background-color: #F9F9F9;
+    height: 10vh;
+}
 
-/* Toutes les sections */
+.box-shadow {
+    box-shadow: 0 0 20px 0;
+}
 
-    section{
-        margin-bottom: 0vh;
-    }
+.logo {
+    width: 30vh;
+}
 
-    /* SECTION 1 */
-    
-        /* animation roue qui tourne (voir keyframes spin) */
-        .roue_aleatoire:active{
-            animation: spin .15s linear;
-        }
+/* SECTION 1 */
+
+/* animation roue qui tourne (Se trouve dans @keyframes spin) */
+.roue_aleatoire:active {
+    animation: spin .15s;
+}
+
+.size {
+    width: 25%;
+}
 
 
-    /* SECTION 2 */
+/* SECTION 2 */
 
-        /* Intitulé */
+.texte-miniscules {
+    text-transform: capitalize;
+}
 
-            .texte-miniscules{
-                text-transform:capitalize ;
-            }
-
-        /* Affichage Couleur */
-
-            .box-couleur{
-                height: 100%;
-                margin-top: 5%;
-                border: solid black 1px;
-            }
 
 /* FOOTER */
 
-    footer {
-        background-color: #F9F9F9;
-        height: 10vh;
-    }
+footer {
+    background-color: #F9F9F9;
+    height: 10vh;
+}
 
-    .box-shadow {
-        box-shadow: 0 0 20px 0;
-    }
+.box-shadow {
+    box-shadow: 0 0 20px 0;
+}
 
 
 /* Se trouve dans "Section 1 (animation qui tourne)" */
-@keyframes spin{
-    from{
+@keyframes spin {
+    from {
         transform: rotate(0);
     }
-    to{
-        transform: rotate(359deg);
+
+    to {
+        transform: rotate(360deg);
     }
+}
+
+.all-box {
+    height: 5vh;
+    display: flex;
+}
+
+.new-div {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    margin-left: 100%;
+    margin-top: 5%;
+}
+
+.buttonsuppr {
+    width: 30px;
+    height: 25px;
+    margin-left: -150%;
+    cursor: pointer;
 }
