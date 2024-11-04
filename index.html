@@ -14,12 +14,12 @@
     <!-- Lien CSS -->
         <link rel="stylesheet" href="style.css">
     <!-- Titre de la page -->
-        <title>Document</title>
+        <title>Site de daltonisme v3</title>
 </head>
 <body>
 
 <!-- En-tête -->
-<header class="d-flex flex-center box-shadow">
+<header class="flex-center box-shadow">
     <nav class="container">
         <!-- Logo -->
         <img class="logo" src="images/logo.png" alt="">
@@ -30,94 +30,81 @@
 <section>
 
     <!-- Section 1 :  -->
-    <section class="container d-grid grid-t-columns gap">
+    <section class="container grid-t-columns1 gap">
     
         <!-- Zone gauche -->
         <div>
 
+            <!-- Titre -->
             <h1>Question ?</h1>
+            <!-- Description -->
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur delectus nam quasi molestiae voluptatibus voluptates ut ipsam, libero dolores perspiciatis obcaecati eveniet minus doloribus vitae necessitatibus, excepturi quia. Voluptas, nam!</p>
 
         </div><!-- Zone gauche -->
 
-        <!-- Zone droite -->
+        <!-- Zone milieu -->
         <div>
-
-            <div>
                 
-                <!-- Code HEX & Selecteur de couleur -->
-                <div>
-                    <input class="test" type="color" value="#ff0000" id="colorWell" />
-                    <input type="text" name="" id="couleurInput">
-                    <button onclick="updateColor()" >send</button>
-                </div>
-            
-                <!-- Bouton "Créer une palette de couleur" -->
-                <button class="button_create" onclick="createMultipleDivs()">Créer une palette de couleur</button>
-
-                <!-- Selecteur taux de sévérité -->
-                <div class="slidecontainer">
-                    <div id="test">
-                        <p>Taux de sévérité : ...</p>
-                    </div>
-                    <input type="range" min="1" max="10" value="1" class="slider" id="myRange">
-                </div>
-
-                <!-- Icon Info -->
-                <img src="" alt=""><!-- ajouter icon info + lien vers texte en bas de page -->
-
+            <!-- Code HEX & Selecteur de couleur -->
+            <div>
+                <input class="test" type="color" value="#ff0000" id="colorWell" />
+                <input type="text" name="" id="couleurInput">
             </div>
+        
+            <!-- Bouton "Créer une palette de couleur" -->
+            <button class="button_create" onclick="createMultipleDivs()">Créer une palette de couleur</button>
+
+            <!-- Selecteur taux de sévérité -->
+            <div class="slidecontainer">
+                <div id="test"></div>
+                <input type="range" min="0" max="2" value="0" step="0.01" class="slider" id="myRange">
+            </div>
+
+            <!-- Icon Info -->
+            <img src="" alt=""><!-- ajouter icon info + lien vers texte en bas de page -->
             
+        </div><!-- Zone milieu -->
+
+        <div><!-- Zone droite -->
             <!-- Roue aléatoire -->
             <img class="size roue_aleatoire" src="images/roue_des_couleurs.jpg" alt="">
-
         </div><!-- Zone droite -->
     
     </section><!-- Section 1 : -->
     
-    <!-- Section 2 : Les Palettes de couleurs &-->
+    <!-- Section 2 :  -->
+    <!-- Intitulé Vision & Affichage Couleur -->
+    <section id="container" class="container grid-t-columns2 flex-row">
+        
+        <!-- modif
+        <div id="" class="box">
+            <input type="color" name="" id="">
+            <input type="text" name="" id="colorTextInput">
+            <button onclick = "supprdiv(index)" name="buttonsuppr">-</button>
+            <h3 class="normal texte-miniscules">test select color</h3>
+        </div> -->
 
-    <section class="container">
+        <!-- Couleur Normal -->
+        <div id="CouleurOrigine" class="grid-column-start all-box">
+            <h3 class="normal texte-miniscules">Trichromate(sans anomalies)</h3>
+        </div>
 
-        <!--  -->
-        <div class="d-flex flex-row">
+        <!-- Couleur PROTANOPIE -->
+        <div id="protanopeCouleur" class="all-box">
+            <h3 class="normal texte-miniscules">PROTANOPIE</h3>
+        </div>
 
-            <!--  -->
-            <div class="size">
-                <!-- Intitulé Vision-->
-                
-                <h2 class="normal texte-miniscules center">Trichromate(sans anomalies)</h2><!-- Rendre les h2 responsives & texte miniscule fonctionnel -->
-                <!-- Affichage Couleur -->
-                <div id="CouleurOrigine" class="box-couleur"></div>
-            </div>
+        <!-- Couleur DEUTERANOPIE -->
+        <div id="deuteranopeCouleur" class="all-box">
+            <h3 class="normal texte-miniscules">DEUTERANOPIE</h3>
+        </div>
 
-            <!--  -->
-            <div class="size">
-                <!-- Intitulé Vision-->
-                <h2 class="normal texte-miniscules center">DEUTERANOPIE</h2>
-                <!-- Affichage Couleur -->
-                <div id="" class="box-couleur"></div>
-            </div>
+        <!-- Couleur TRITANOPIE -->
+        <div id="tritanopeCouleur" class="all-box">
+            <h3 class="normal texte-miniscules">TRITANOPIE</h3>
+        </div>
 
-            <!--  -->
-            <div class="size">
-                <!-- Intitulé Vision-->
-                <h2 class="normal texte-miniscules center">TRITANOPIE</h2>
-                <!-- Affichage Couleur -->
-                <div id="" class="box-couleur"></div>
-            </div>
-
-            <!--  -->
-            <div class="size">
-                <!-- Intitulé Vision-->
-                <h2 class="normal texte-miniscules center">PROTANOPIE</h2>
-                <!-- Affichage Couleur -->
-                <div id="" class="box-couleur"></div>
-            </div>
-
-        </div><!--  -->
-
-    </section><!-- Section 2 : Les Palettes de couleurs -->
+    </section><!-- Section 2 :  -->
 
 </section><!-- Toutes les sections -->
 
@@ -125,6 +112,7 @@
 <footer class="d-flex flex-center box-shadow"></footer>
 
 <script src="script.js"></script>
+<script src="dalto.js"></script>
 
 </body>
 </html>
